@@ -1,0 +1,5 @@
+{
+    "token_secret_key": "secret",
+    "mongo_uri":"mongodb://localhost:27017/rtsp",
+    "http_port": 4000
+}
