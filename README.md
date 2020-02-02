@@ -86,3 +86,4 @@ Installing from Homebrew via `brew install ffmpeg`. You get the most common depe
 - integrate socket.io into redux 
 - consider adding typescript to the server or  framework such as nestjs, loopback.. etc
 - dockerize 
+- error handling
