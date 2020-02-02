@@ -85,3 +85,4 @@ Installing from Homebrew via `brew install ffmpeg`. You get the most common depe
 - divide Rtsp page to small component . i.e: rtsp item , rtsp table ..etc
 - integrate socket.io into redux 
 - consider adding typescript to the server or  framework such as nestjs, loopback.. etc
+- dockerize 
