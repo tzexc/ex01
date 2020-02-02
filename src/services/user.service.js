@@ -1,6 +1,5 @@
-const { User, validate } = require('../models/user');
+const { User } = require('../models/user');
 const bcrypt = require('bcrypt');
-const  { plainToClass } = require("class-transformer");
 
 class UserService{
     constructor(){}
