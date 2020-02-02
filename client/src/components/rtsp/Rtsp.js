@@ -23,7 +23,7 @@ class Rtsp extends Component {
     componentDidMount(){
         this.props.getAllRtspUrlByUser(this.props.auth.user.id)
         this.props.startSocketConnection(this.props.auth.user.id)
-    
+        console.log(this.props.rtsp_urls)
     }
 
     handleLogout = e => {
@@ -38,16 +38,17 @@ class Rtsp extends Component {
         if (divSocket) {
             divSocket.disconnect();
         }
-        // console.log(this.state.socket)
+
         divSocket = socketIOClient(this.state.endpoint + `/cam_${rtspItem._id}`);
         divSocket.on('data', (data) => {
+            console.log(data)
             var bytes = new Uint8Array(data);
             this.imagesContent[rtspItem._id].children[0].src = 'data:image/jpeg;base64,' + base64ArrayBuffer(bytes);
         });
     };
     render() {
         const { user } = this.props.auth;
-
+        console.log(this.props.rtsp_urls)
         return (
 
             <div className="container">

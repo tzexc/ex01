@@ -20,7 +20,7 @@ function rtspReducer(state = initialState, action){
         case UPDATE_RTSP_SOCKET_DATA:
              return { rtsp_data_loading: true }; 
         case UPDATE_RTSP_SOCKET_DATA_SUCCESS:
-            return {};   
+            return {...state};   
         case UPDATE_RTSP_SOCKET_DATA_FAILURE:
             return { error: action.error};             
         case GET_RTSP_BY_USER_SUCCESS:
